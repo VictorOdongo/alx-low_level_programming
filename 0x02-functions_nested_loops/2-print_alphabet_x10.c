@@ -12,6 +12,6 @@ for (j = 0; j < 26; j++)
 {
 _putchar(j + 'a');
 }
-}
 _putchar('\n');
+}
 }
