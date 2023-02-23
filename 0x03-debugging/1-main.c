@@ -13,11 +13,11 @@ printf("Infinite loop incoming :(\n");
 
 i = 0;
 /**
-*while (i < 10)
+*while (i < 10) - Checks condition
 *{
-*      putchar(i);
+*       putchar(i);
 *}
-*/
+*/ /* \o/ - Prints message for end of loop */
 printf("Infinite loop avoided! \\o/\n");
 
 return (0);
