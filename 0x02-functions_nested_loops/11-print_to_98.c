@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 /**
  * print_to_98 -Prints from n to 98
  * @n: The number to start printing
@@ -6,21 +7,16 @@
  */
 void print_to_98(int n)
 {
-while (n <= 98)
+if (n >= 98)
 {
-int tmp = n;
-while (tmp > 0)
+while (n > 98)
+printf("%d, ", n--);
+printf("%d\n", n);
+}
+else
 {
-int digit = tmp % 10;
-_putchar(digit + '0');
-tmp /= 10;
+while (n < 98)
+printf("%d, ", n++);
+printf("%d\n", n);
 }
-if (n != 98)
-{
-_putchar(',');
-_putchar(' ');
-}
-n++;
-}
-_putchar('\n');
 }
