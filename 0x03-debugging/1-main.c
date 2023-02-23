@@ -18,7 +18,7 @@ i = 0;
 * putchar(i);
 * }
 */
-printf("Infinite loop avoided! \\o/\n"); /* Message shows end of loop */
+printf("Infinite loop avoided! \\o/\n"); /* Indicats infinite loop has been avoided */
 
 return (0);
 }
