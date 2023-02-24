@@ -1,36 +1,26 @@
-#include <stdlib.h>
+#include "main.h"
 #include <stdio.h>
 /**
- * main - Print from 1 to 100
- * Return: 0
- * 3 multiples print Fizz instead of number
- * 5 print Buzz instead of number
- * 3 & 5 printFfizzBuzz
+ * main - Fizz Buzz.
+ *
+ * Return: Always 0.
  */
 int main(void)
 {
 int i;
 for (i = 1; i <= 100; i++)
 {
-if (i == 100)
-{
-printf("Buzz ");
-}
-else if ((i % 3 == 0) && (i % 5 == 0))
-{
-printf("FizzBuzz ");
-}
-else if (i % 3 == 0)
-{
-printf("Fizz ");
-}
-else if (i % 5 == 0)
-{
-printf("Buzz ");
-}
+if (((i % 3) == 0) && ((i % 5) != 0))
+printf("Fizz");
+else if (((i % 5) == 0) && ((i % 3) != 0))
+printf("Buzz");
+else if (((i % 5) == 0) && ((i % 3) == 0))
+printf("FizzBuzz");
 else
+printf("%d", i);
+if (!(i == 100))
 {
-printf("%d ", i);
+printf(" ");
 }
 }
 printf("\n");
