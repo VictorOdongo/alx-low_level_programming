@@ -3,6 +3,9 @@
 /**
  * main - Entry
  * Return: 0
+ * 3 multiples print Fizz instead of number
+ * 5 print Buzz instead of number
+ * 3 & 5 printFfizzBuzz
  */
 int main(void)
 {
