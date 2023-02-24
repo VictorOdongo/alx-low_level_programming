@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 /**
- * main - Entry
+ * main - Print from 1 to 100
  * Return: 0
  * 3 multiples print Fizz instead of number
  * 5 print Buzz instead of number
@@ -12,7 +12,11 @@ int main(void)
 int i;
 for (i = 1; i <= 100; i++)
 {
-if ((i % 3 == 0) && (i % 5 == 0))
+if (i == 100)
+{
+printf("Buzz ");
+}
+else if ((i % 3 == 0) && (i % 5 == 0))
 {
 printf("FizzBuzz ");
 }
