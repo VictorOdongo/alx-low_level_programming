@@ -6,40 +6,21 @@
  */
 char *leet(char *x)
 {
-	char *ptr = x;
-	char *leet_x = x;
+	int a = 0, b, l = 5;
+	char tr[5] = {'A', 'E', 'O', 'T', 'L'};
+	char trw[5] = {'4', '3', '0', '7', '1'};
 
-	while (*ptr)
+	while (x[a])
 	{
-		char c = *ptr;
+		b = 0;
 
-		if (c == 'a' || c == 'A')
+		while (b < l)
 		{
-			*leet_x = '4';
+			if (x[a] == tr[b] || x[a] - 32 == tr[b])
+				x[a] = trw[b];
+			b++;
 		}
-		else if (c == 'e' || c == 'E')
-		{
-			*leet_x = '3';
-		}
-		else if (c == 'o' || c == 'O')
-		{
-			*leet_x = '0';
-		}
-		else if (c == 't' || c == 'T')
-		{
-			*leet_x = '7';
-		}
-		else if (c == 'l' || c == 'L')
-		{
-			*leet_x = '1';
-		}
-		else
-		{
-			*leet_x = c;
-		}
-		ptr++;
-		leet_x++;
+		a++;
 	}
-	*leet_x = '\0';
 	return (x);
 }
