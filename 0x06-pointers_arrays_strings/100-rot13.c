@@ -2,6 +2,7 @@
 #include <ctype.h>
 /**
  * rot13 - rotates by 13 places
+ * @str: pointer to a string
  * Return: void
  */
 char *rot13(char *str)
