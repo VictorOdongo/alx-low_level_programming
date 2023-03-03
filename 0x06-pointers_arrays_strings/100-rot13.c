@@ -1,22 +1,29 @@
 #include "main.h"
 #include <ctype.h>
 /**
- * rot13 - rotates by 13 places
- * @str: pointer to a string
+ * rot13 - encodes a string using rot13
+ * @s: pointer to a string
  * Return: void
  */
-char *rot13(char *str)
+char *rot13(char *s)
 {
-	char *s = str;
+	int i;
+
+	char rot13[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	char ROT13[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
+	char *ptr = s;
 
 	while (*s)
 	{
-		if (isalpha(*s))
+		for (i = 0; i <= 52; i++)
 		{
-			char base = isupper(*s) ? 'A' : 'a';
-			*s = (char)(((*s - base + 13) % 26) + base);
+			if (*s == rot13[i])
+			{
+				*s = ROT13[i];
+				break;
+			}
 		}
 		s++;
 	}
-	return (str);
+	return (ptr);
 }
